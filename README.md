@@ -1,4 +1,4 @@
-# dijkstra
+#Dijkstra
 Project for Discrete Structures and Graph Theory
 
 #Install networkx 
@@ -7,4 +7,7 @@ pip install networkx
 
 #Start server
 python -m SimpleHTTPServer 8000
+
+#Run project
+http://localhost/
 
