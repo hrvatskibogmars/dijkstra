@@ -11,3 +11,4 @@ python -m SimpleHTTPServer 8000
 #Run project
 http://localhost/index.html
 
+#App folder contains python scripts
