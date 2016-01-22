@@ -1,20 +1,45 @@
 import networkx as nx
 from networkx.readwrite import json_graph
 import json
+import csv
 
 
 
-G=nx.Graph()
+
+G=nx.MultiGraph()
 #lines = ["Zagreb Ljubljana {'weight':3}", "Berlin Varshava {'weight':27}", "Paris Barcelona {'weight':3}"]
 #G = nx.read_edgelist(lines, nodetype=str)
 #G.nodes()
 
 #lines= ["Zagreb Ljubljana 3", "Berlin Varshava 5", "Paris Barcelona 5"]
 
-G = nx.read_edgelist("tocke.txt",delimiter=",", nodetype=str, data=(('weight',int),))
+G = nx.read_edgelist("../data/tocke.txt",delimiter=",", nodetype=str, data=(('weight',int),))
+data =  (nx.all_pairs_dijkstra_path_length(G))
+#print data
+x = []
+for key in sorted(data):
+    #print "%s: %s" % (key, data[key])
+    x.append(data[key])
+#print x
+line = []
 
-d = json_graph.node_link_data(G)
-json.dump(d, open('data.json','w'))
+for val in x:
+    red = []
+    for key in sorted(val):
+        red.append(val[key])
+    line.append(red)
+
+print line
+print len(line)
+
+resultFile = open("output.csv",'wb')
+wr = csv.writer(resultFile, dialect='excel')
+wr.writerow(line)
+
+#nx.write_weighted_edgelist(G, 'test.weighted.edgelist')
+
+#print json_graph.adjacency_graph(data)
+#json.dump(data, open('data.json','w'))
 
 
 #G.add_edge("Berlin","Kijev",weight=40)

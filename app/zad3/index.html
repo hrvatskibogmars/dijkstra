@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+<meta charset="utf-8">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
   <script src="/assets/js/d3.min.js"></script>
+
+
 </head>
 <style>
-      body {
+
+.node text {
+  pointer-events: none;
+  font: 10px sans-serif;
+}
+
+.link {
+  stroke: #999;
+  stroke-opacity: .6;
+}
+    body {
         padding-top: 70px;
         /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
     }
-</style>
 
+</style>
 <body>
  <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -34,7 +47,7 @@
                         <a href="/index.html">Opis projekta</a>
                     </li>
                     <li>
-                        <a href="/app/zad3/index.html">Zadatak 3</a>
+                        <a href="#">Zadatak 3</a>
                     </li>
                     <li>
                         <a href="/app/zad4/index.html">Zadatak 4</a>
@@ -51,11 +64,20 @@
 
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1>Opis projektnog zadatka</h1>
-
+                <h1>Zadatak 3</h1>
+                <h3 class="text-left">Tekst zadataka</h3>
+                <p class="text-justify">S obzirom na to da se najviše plina  troši u  Berlinu, Ljubljani, Beogradu i Tirani odredite u koji grad (Minsk, Kijev, Rostov, St. Petersburg) se plin mora prvo otpremiti iz Moskve  kako bi najkraćim putem stigao u navedene gradove. </p>
+                <hr>
+                <h3 class="text-left">Rješenje zadatka</h3>
+                <div id="graph">
+              </div>
+                <iframe src="https://docs.google.com/spreadsheets/d/1PWaHYcknJLURLQtNhFV-IJaU97o0v9hgRTjJ_qT8n_k/pubhtml?gid=1421884352&amp;single=true&amp;widget=true&amp;headers=false" width="700px" height="300px"></iframe>
             </div>
         </div>
-
+        <!-- /.row -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="/assets/js/bootstrap.min.js"></script>
+      <script src="/assets/js/zad3.js"></script>
 
     </div>
 </body>

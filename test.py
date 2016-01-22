@@ -1,0 +1,4 @@
+
+testrow ={'Rostov': 981, 'Istanbul': 449, 'Sofija': 954, 'Riga': 3254, 'Varsava': 3000, 'Beograd': 1348, 'Tirana': 1727, 'Skoplje': 1197, 'Prag': 2256, 'Ljubljana': 2173, 'Budimpesta': 1727, 'Zagreb': 2033, 'Bratislava': 1927, 'Ankara': 0, 'Bukurest': 896, 'Berlin': 2607, 'Munchen': 2440, 'Gijon': 4389, 'Bern': 2869, 'Bec': 2006, 'Milano': 2677, 'Barcelona': 3702, 'Minsk': 2773, 'Sarajevo': 1631, 'Paris': 3534, 'Lisabon': 4953, 'Marseille': 3198, 'Krakov': 2706, 'Talin': 3135, 'Kisinjev': 1350, 'Kijev': 1820, 'Atena': 1011, 'Bruxelles': 3222, 'Rim': 2339, 'Madrid': 4325, 'Amsterdam': 3261, 'St.Petersburg': 2767, 'Vilnius': 2960, 'Moskva': 2054}
+for key in sorted(testrow):
+    print "%s" % (testrow[key])
