@@ -27,7 +27,7 @@ d3.json("/data/data.json", function(error, graph) {
       .enter().append("line")
       .attr("class",function(d){
       if(d.weight == 855 || d.weight == 470 || d.weight == 454 || d.weight == 447 || d.weight == 562 || d.weight == 716
-      || d.weight == 1340 || d.weight == 450 || d.weight == 200 || d.weight == 379 || d.weight == 886 || d.weight == 569){
+      || d.weight == 1340 || d.weight == 450 || d.weight == 200 || d.weight == 379 || d.weight == 886 || d.weight == 596){
       return "red"
       }
       else
