@@ -9,5 +9,5 @@ pip install networkx
 python -m SimpleHTTPServer 8000
 
 #Run project
-http://localhost/
+http://localhost/index.html
 
